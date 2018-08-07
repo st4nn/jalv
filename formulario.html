@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Autocompletado de Mutiples campos Usando jQuery , Ajax , PHP y MySQL</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">  
+    <form id="frmFormulario">
+      <input id="txtFormulario_InspectorId" type="hidden">
+      <input id="txtFormulario_ContratoId" type="hidden">
+
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8"><h2>INSPECCIONES DE SEGURIDAD INDUSTRIAL</h2></div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2 form-group">
+          <label class="control-label">FECHA</label>
+          <input type="date" class="form-control" id="txtFormulario_Fecha">
+        </div>
+        <div class="col-sm-4 form-group">
+          <label class="control-label">N/ASIGNADO / CEDULA</label>
+          <input type="number" class="form-control" id="txtFormulario_Cedula">
+        </div>
+        <div class="col-sm-4 form-group">
+          <label class="control-label">EMPRESA INSPECTOR</label>
+          <input type="text" class="form-control" id="txtFormulario_InspectorEmpresa">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label class="control-label">Num Factura</label>
+          <input type="text" class="form-control" id="txtFormulario_NumFactura">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label class="control-label">Nombre Inspector</label>
+          <input type="text" class="form-control" id="txtFormulario_InspectorNombre">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label class="control-label">CONTRATO No</label>
+          <input type="text" class="form-control" id="txtFormulario_Contrato">
+        </div>
+        <div class="col-sm-4 form-group">
+          <label class="control-label">JEFE DE CUADRILLA</label>
+          <input type="text" class="form-control" id="txtFormulario_JefeCuadrilla">
+        </div>
+        <div class="col-sm-4 form-group">
+          <label class="control-label">EMPRESA JEFE DE CUADRILLA</label>
+          <input type="text" class="form-control" id="txtFormulario_Empresa">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3 form-group">
+          <label class="control-label">DIRECCION</label>
+          <input type="text" class="form-control" id="txtFormulario_Direccion">
+        </div>
+        <div class="col-sm-6 form-group">
+          <label class="control-label">TRABAJO A RELIZAR</label>
+          <input type="text" class="form-control" id="txtFormulario_Trabajo">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">ZONA</label>
+          <input type="text" class="form-control" id="txtFormulario_Zona">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3 form-group">
+          <label class="control-label">EQUIPO DE TRABAJO</label>
+          <input type="text" class="form-control" id="txtFormulario_Equipo">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">DEPENDENCIA</label>
+          <input type="text" class="form-control" id="txtFormulario_Dependencia">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">CONSIGNACION / ODT No</label>
+          <input type="text" class="form-control" id="txtFormulario_Odt">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">NOMBRE DEL CONTRATO</label>
+          <input type="text" class="form-control" id="txtFormulario_ContratoNombre">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3 form-group">
+          <label class="control-label">CEL/AVANTEL</label>
+          <input type="number" class="form-control" id="txtFormulario_Celular">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">TIPO DE VEHICULO</label>
+          <input type="text" class="form-control" id="txtFormulario_VehiculoTipo">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">PLACA DE VEHICULO</label>
+          <input type="text" class="form-control" id="txtFormulario_VehiculoPlaca">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">PLACA DE GRUA</label>
+          <input type="text" class="form-control" id="txtFormulario_VehiculoGrua">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3 form-group">
+          <label class="control-label">PLACA CANASTA</label>
+          <input type="text" class="form-control" id="txtFormulario_VehiculoCanasta">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">PLACA MOTO</label>
+          <input type="text" class="form-control" id="txtFormulario_VehiculoMoto">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">HORA INICIAL</label>
+          <input type="time" class="form-control" id="txtFormulario_HoraInicial">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label class="control-label">HORA FINAL</label>
+          <input type="time" class="form-control" id="txtFormulario_HoraFinal">
+        </div>
+      </div>
+
+      <h2>DATOS DE CUADRILLA / GRUPO DE TRABAJO</h2>
+      <p>Marque con una (X) la casilla correspondiente de acuerdo con lo observado en la inspección de seguridad industrial y ambiental. Para cualquier respuesta negativa indique a que categoria en el corresponde este incumplimiento y registre las acciones tomadas en el campo de observaciones del inspector</p>
+      
+      <div id="accordion">
+
+      </div>
+      <textarea class="form-control" rows="5" placeholder="OBSERVACIONES:" id="txtFormulario_Observaciones"></textarea>
+
+      <div class="col-sm-3 form-group">
+        <label class="control-label">El resultado de la inspección es conforme</label>
+        <select class="form-control" id="txtFormulario_Conformidad">
+          <option value="Si">Si</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-block btn-success">Guardar</button>
+    </form>
+  </div>
+  
+
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <script src="js/formulario.js"></script>
+</body>
+</html>

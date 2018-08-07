@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Autocompletado de Mutiples campos Usando jQuery , Ajax , PHP y MySQL</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">  
+    <div class="row">
+      <input type="hidden" id="id_contrato">
+      <form id="frmCrearContrato" class="col-sm-6">
+        <button type="button" id="btnLimpiar" class="btn btn-danger btn-block">Limpiar</button>
+
+        <div class="form-group">
+          <label class="control-label">Contrato:</label>
+          <input class="form-control" id="contrato">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Jefe:</label>
+          <input class="form-control" id="jefe">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Grupo:</label>
+          <input class="form-control" id="grupo">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Equipo:</label>
+          <input class="form-control" id="equipo">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Dependencia:</label>
+          <input class="form-control" id="dependencia">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Nombre:</label>
+          <input class="form-control" id="nombre">
+        </div>
+
+        <button type="submit" class="btn btn-success btn-block">Guardar</button>
+      </form>
+
+      <div id="frmCrearInspector" class="col-sm-6">
+        <div class="form-group">
+          <label class="control-label">Cedula:</label>
+          <input class="form-control" id="txtInspector_Cedula">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Nombre:</label>
+          <input class="form-control" id="txtInspector_Nombre">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Empresa:</label>
+          <input class="form-control" id="txtInspector_Empresa">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
